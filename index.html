@@ -25,6 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h2>Test:</h2>
         <hr>
         <button id="enviarBtn" class="btn btn-primary">Enviar</button>
+        <a href="tel:+51902153598" id="phoneLink">Llamar al +51 902 153 598</a>
         <a href="#">Enviar link</a>
     </div>
     <script>
@@ -33,6 +34,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'event': 'customButtonClick',
                 'buttonId': 'enviarBtn',
                 'buttonText': 'Enviar'
+            });
+        });
+
+        document.getElementById('phoneLink').addEventListener('click', function() {
+            dataLayer.push({
+                'event': 'phoneClick',
+                'phoneNumber': '+51902153598'
             });
         });
     </script>
