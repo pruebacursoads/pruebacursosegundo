@@ -51,8 +51,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         a:hover {
             color: #0077ff;
         }
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-section, .image-section {
+            flex: 1;
+            margin: 10px;
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
     </style>
-    <title>Registro Futurista</title>
+    <title>Tienda Ecommerce Futurista</title>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -61,16 +74,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container mt-5">
-        <h2>Registro Futurista</h2>
+        <h2>Tienda Ecommerce Futurista</h2>
         <hr>
-        <button id="enviarBtn" class="btn btn-primary">Enviar</button>
-        <br><br>
-        <a href="tel:+51902153598" id="phoneLink">Llamar al +51 902 153 598</a>
-        <br>
-        <a href="#">Enviar link</a>
+        <div class="form-container">
+            <div class="form-section">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <button type="submit" id="enviarBtn" class="btn btn-primary">Enviar</button>
+                </form>
+                <br>
+                <a href="tel:+51902153598" id="phoneLink">Llamar al +51 902 153 598</a>
+                <br>
+                <a href="#">Enviar link</a>
+            </div>
+            <div class="image-section">
+                <img src="https://via.placeholder.com/300x400?text=Ropa+Deportiva+1" alt="Ropa Deportiva 1">
+                <img src="https://via.placeholder.com/300x400?text=Ropa+Deportiva+2" alt="Ropa Deportiva 2">
+                <img src="https://via.placeholder.com/300x400?text=Ropa+Deportiva+3" alt="Ropa Deportiva 3">
+            </div>
+        </div>
     </div>
     <script>
-        document.getElementById('enviarBtn').addEventListener('click', function() {
+        document.getElementById('enviarBtn').addEventListener('click', function(event) {
+            event.preventDefault();
             dataLayer.push({
                 'event': 'customButtonClick',
                 'buttonId': 'enviarBtn',
