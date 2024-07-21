@@ -148,8 +148,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             window.location.href = 'https://pruebacursosegundo.vercel.app/gracias.html';
         });
 
-        document.getElementById('enviarBtn').addEventListener('click', function(event) {
-            event.preventDefault();
+        document.getElementById('enviarBtn').addEventListener('click', function() {
+            document.getElementById('contactForm').submit();
             dataLayer.push({
                 'event': 'customButtonClick',
                 'buttonId': 'enviarBtn',
