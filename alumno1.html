@@ -69,6 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             height: auto;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            cursor: pointer;
         }
         .instagram-section {
             text-align: center;
@@ -150,7 +151,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://s3-us-west-2.amazonaws.com/joinnus.com/user/3990907/act66b161b790dd1.jpg" class="d-block w-100" alt="Ropa Deportiva 1">
+                        <img src="https://s3-us-west-2.amazonaws.com/joinnus.com/user/3990907/act66b161b790dd1.jpg" class="d-block w-100" alt="Ropa Deportiva 1" data-url="https://www.joinnus.com/events/seminarios-conferencias/lima-transformando-tu-negocio-con-hugo-lopez-63856">
                     </div>                
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -191,6 +192,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         document.getElementById("instagramLink").addEventListener("click", function() {
             window.open("https://www.instagram.com/hugolopez.pe/", "_blank");
+        });
+
+        // Agregar evento click a las imágenes del carrusel
+        document.querySelectorAll('.carousel-item img').forEach(function(img) {
+            img.addEventListener('click', function() {
+                window.location.href = img.getAttribute('data-url');
+            });
         });
     </script>
 </body>
