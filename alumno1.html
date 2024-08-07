@@ -83,6 +83,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .instagram-section img:hover {
             opacity: 0.8;
         }
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .video-container iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
     </style>
     <title>Tienda Ecommerce Futurista</title>
     <!-- Google tag (gtag.js) -->
@@ -103,6 +120,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="container mt-5">
         <h2>Cursos de Marketing Digital - Alumno 1</h2>
         <hr>
+        <div class="banner">
+            <img src="https://drive.google.com/uc?export=view&id=1KsJgASztAy9AX8fK9LR3dAtb8QDTLBFs" alt="Banner Image">
+        </div>
         <div class="form-container">
             <div class="form-section">
                 <form id="contactForm">
@@ -152,6 +172,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </button>
             </div>
         </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/7jHfHS8VWF8" frameborder="0" allowfullscreen></iframe>
+        </div>
         <div class="instagram-section">
             <p>Sígueme en Instagram:</p>
             <a href="https://www.instagram.com/hugolopez.pe/" target="_blank" id="instagramLink">
@@ -159,35 +182,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </a>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFNf5P289jCW9+5sX2pGAflq1cZZHd0GrgkB1VYFhsjraQdmVg85O4W8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-cm5PFPF5bRRSDfHv4CU3Sx9eGiv7wAnjA2ue5s/NlKpV1JcS4ATvEXE5LG9jh7OF" crossorigin="anonymous"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        document.getElementById("phoneLink").addEventListener("click", function() {
+            window.location.href = "tel:+51902153598";
+        });
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();
-            // Aquí puedes agregar código para enviar los datos a un servidor si es necesario
-            window.location.href = 'https://pruebacursosegundo.vercel.app/graciasalumno1.html';
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var mensaje = "Nombre: " + name + "%0AEmail: " + email + "%0ATeléfono: " + phone;
+            var whatsappUrl = "https://api.whatsapp.com/send?phone=51902153598&text=" + mensaje;
+            window.open(whatsappUrl, "_blank");
         });
 
-        document.getElementById('enviarBtn').addEventListener('click', function() {
-            document.getElementById('contactForm').submit();
-            dataLayer.push({
-                'event': 'customButtonClick',
-                'buttonId': 'enviarBtn',
-                'buttonText': 'Enviar'
-            });
-        });
-
-        document.getElementById('phoneLink').addEventListener('click', function() {
-            dataLayer.push({
-                'event': 'phoneClick',
-                'phoneNumber': '+51902153598'
-            });
-        });
-
-        document.getElementById('instagramLink').addEventListener('click', function() {
-            dataLayer.push({
-                'event': 'share',
-                'platform': 'Instagram'
-            });
+        document.getElementById("instagramLink").addEventListener("click", function() {
+            window.open("https://www.instagram.com/hugolopez.pe/", "_blank");
         });
     </script>
 </body>
