@@ -179,14 +179,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         document.getElementById('instagramLink').addEventListener('click', function() {
             dataLayer.push({
                 'event': 'share',
-                'platform': 'Instagram'
-            });
-        });
-
-        // Joinnus link click event
-        document.getElementById('joinnusLink').addEventListener('click', function() {
-            dataLayer.push({
-                'event': 'joinnusClick',
                 'platform': 'Joinnus'
             });
         });
@@ -201,7 +193,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING) {
+            if (event.data === YT.PlayerState.PLAYING) {
+                console.log('Video is playing');
                 dataLayer.push({
                     'event': 'Reproducir_video',
                     'videoUrl': event.target.getVideoUrl()
