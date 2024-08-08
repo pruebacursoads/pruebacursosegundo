@@ -149,17 +149,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="instagram-section">
             <h3>¡Conoce mucho más del evento en este video!😃</h3>
             <div class="video-container">
-                <iframe id="youtubeVideo" src="https://www.youtube.com/embed/7jHfHS8VWF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/7jHfHS8VWF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p>Compra tus entradas en Joinnus aquí</p>
-            <a href="https://www.joinnus.com/events/seminarios-conferencias/lima-transformando-tu-negocio-con-hugo-lopez-63856" target="_blank" id="joinnusLink">
-                <img src="https://cdn.joinnus.com/blog/wp-content/uploads/2018/12/19185753/joinnus-logo.jpg" alt="Joinnus Logo">
+            <a href="https://www.joinnus.com/events/seminarios-conferencias/lima-transformando-tu-negocio-con-hugo-lopez-63856" target="_blank" id="instagramLink">
+                <img src="https://cdn.joinnus.com/blog/wp-content/uploads/2018/12/19185753/joinnus-logo.jpg" alt="Instagram Logo">
             </a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFNf5P289jCW9+5sX2pGAflq1cZZHd0GrgkB1VYFhsjraQdmVg85O4W8p" crossorigin="anonymous"></script>
     <script>
-        // Form submit event
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
             // Aquí puedes agregar código para enviar los datos a un servidor si es necesario
@@ -175,38 +174,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             });
         });
 
-        // Instagram link click event
         document.getElementById('instagramLink').addEventListener('click', function() {
             dataLayer.push({
                 'event': 'share',
-                'platform': 'Joinnus'
+                'platform': 'Instagram'
             });
         });
-
-        // YouTube video event
-        function onYouTubeIframeAPIReady() {
-            var player = new YT.Player('youtubeVideo', {
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data === YT.PlayerState.PLAYING) {
-                console.log('Video is playing');
-                dataLayer.push({
-                    'event': 'Reproducir_video',
-                    'videoUrl': event.target.getVideoUrl()
-                });
-            }
-        }
-
-        // Load the YouTube API
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     </script>
 </body>
 </html>
