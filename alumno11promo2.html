@@ -1,3 +1,8 @@
+Claro, para agregar una sección de "Síguenos en las redes sociales" justo después del contenedor de compra tus entradas, necesitas insertar el código HTML apropiado y asegurarte de que el diseño se mantenga consistente. Aquí está el código HTML que puedes usar para añadir esa sección después del contenedor de compra tus entradas:
+
+### Código HTML para la Sección de Redes Sociales
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <!-- Google Tag Manager -->
@@ -100,6 +105,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width: 80%;
             height: 450px;
         }
+        .social-media-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+        .social-icon:hover {
+            opacity: 0.8;
+        }
     </style>
     <title>Tienda Ecommerce Futurista</title>
     <!-- Google tag (gtag.js) -->
@@ -160,66 +178,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <img src="https://cdn.joinnus.com/blog/wp-content/uploads/2018/12/19185753/joinnus-logo.jpg" alt="Instagram Logo">
             </a>
         </div>
-    </div>
-<!-- Sección de Redes Sociales -->
-<div class="container mt-5">
-    <div class="social-media-section text-center mt-5">
-        <h3>¡Síguenos en nuestras redes sociales!</h3>
-        <div class="d-flex justify-content-center mt-3">
-            <a href="https://www.facebook.com/tuempresa" target="_blank" class="me-3">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
-            </a>
-            <a href="https://twitter.com/tuempresa" target="_blank" class="me-3">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" class="social-icon">
-            </a>
-            <a href="https://www.instagram.com/tuempresa" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
-            </a>
+        <!-- Sección de Redes Sociales -->
+        <div class="social-media-section">
+            <h3>¡Síguenos en nuestras redes sociales!</h3>
+            <div class="d-flex justify-content-center mt-3">
+                <a href="https://www.facebook.com/tuempresa" target="_blank" class="me-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://twitter.com/tuempresa" target="_blank" class="me-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/tuempresa" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
         </div>
+        <!-- Fin Sección de Redes Sociales -->
     </div>
-</div>
-<!-- Fin Sección de Redes Sociales -->
-
-
-    .social-media-section {
-    color: #fff;
-}
-
-.social-icon {
-    width: 50px;
-    height: 50px;
-    transition: 0.3s;
-    border-radius: 50%; /* Para hacer los íconos circulares si son cuadrados */
-}
-
-.social-icon:hover {
-    opacity: 0.8;
-}
-
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFNf5P289jCW9+5sX2pGAflq1cZZHd0GrgkB1VYFhsjraQdmVg85O4W8p" crossorigin="anonymous"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Aquí puedes agregar código para enviar los datos a un servidor si es necesario
-            window.location.href = 'https://pruebacursosegundo.vercel.app/graciasalumno11promo2.html';
-        });
-
-        document.getElementById('enviarBtn').addEventListener('click', function() {
-            document.getElementById('contactForm').submit();
-            dataLayer.push({
-                'event': 'customButtonClick',
-                'buttonId': 'enviarBtn',
-                'buttonText': 'Enviar'
-            });
-        });
-
-        document.getElementById('instagramLink').addEventListener('click', function() {
-            dataLayer.push({
-                'event': 'share',
-                'platform': 'Instagram'
-            });
-        });
-    </script>
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm
