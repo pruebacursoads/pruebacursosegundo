@@ -192,6 +192,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
                 </a>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFNf5P289jCW9+5sX2pGAflq1cZZHd0GrgkB1VYFhsjraQdmVg85O4W8p" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí puedes agregar código para enviar los datos a un servidor si es necesario
+            window.location.href = 'https://pruebacursosegundo.vercel.app/graciasalumno1.html';
+        });
+
+        document.getElementById('enviarBtn').addEventListener('click', function() {
+            document.getElementById('contactForm').submit();
+            dataLayer.push({
+                'event': 'customButtonClick',
+                'buttonId': 'enviarBtn',
+                'buttonText': 'Enviar'
+            });
+        });
+
+        document.getElementById('instagramLink').addEventListener('click', function() {
+            dataLayer.push({
+                'event': 'share',
+                'platform': 'Instagram'
+            });
+        });
+    </script>
         </div>
     </div>
 </body>
