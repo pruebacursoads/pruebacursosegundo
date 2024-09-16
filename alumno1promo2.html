@@ -92,14 +92,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .instagram-section img:hover {
             opacity: 0.8;
         }
-        .video-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .video-container iframe {
-            width: 80%;
-            height: 450px;
-        }
     </style>
     <title>Tienda Ecommerce Futurista</title>
     <!-- Google tag (gtag.js) -->
@@ -141,19 +133,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </form>
             </div>
             <div class="image-section">
-                <a href="https://www.joinnus.com/events/seminarios-conferencias/lima-transformando-tu-negocio-con-hugo-lopez-63856" target="_blank">
-                    <img src="https://s3-us-west-2.amazonaws.com/joinnus.com/user/3990907/act66b161b790dd1.jpg" alt="Imagen de Evento">
+                <a href="https://www.instagram.com/queensleague/" target="_blank" id="instagramImage">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E22AQFMdhjGlamn2A/feedshare-shrink_800/feedshare-shrink_800/0/1724972589749?e=2147483647&v=beta&t=u50PXMWtrGWetVkcP-cxuQe3URcelM5bWNncvYe07Hc" alt="Instagram Image">
                 </a>
             </div>
         </div>
         <div class="instagram-section">
-            <h3>¡Conoce mucho más del evento en este video!😃</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/7jHfHS8VWF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>Compra tus entradas en Joinnus aquí</p>
-            <a href="https://www.joinnus.com/events/seminarios-conferencias/lima-transformando-tu-negocio-con-hugo-lopez-63856" target="_blank" id="instagramLink">
-                <img src="https://cdn.joinnus.com/blog/wp-content/uploads/2018/12/19185753/joinnus-logo.jpg" alt="Instagram Logo">
+            <p>Únete al grupo de WhatsApp aquí</p>
+            <a href="https://chat.whatsapp.com/I5q1a4HsOylCtMoUUmdOD4" target="_blank" id="instagramLink">
+                <img src="https://cdn.icon-icons.com/icons2/2972/PNG/512/whatsapp_logo_icon_186881.png" alt="WhatsApp Logo">
             </a>
         </div>
     </div>
@@ -162,7 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
             // Aquí puedes agregar código para enviar los datos a un servidor si es necesario
-            window.location.href = 'https://pruebacursosegundo.vercel.app/graciasalumno1promo2.html';
+            window.location.href = 'https://pruebacursosegundo.vercel.app/graciasalumno13promo2.html';
         });
 
         document.getElementById('enviarBtn').addEventListener('click', function() {
@@ -176,8 +164,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         document.getElementById('instagramLink').addEventListener('click', function() {
             dataLayer.push({
+                'event': 'join_group',
+                'platform': 'WhatsApp'
+            });
+        });
+
+        // Agregar datalayer.push para la imagen de Instagram
+        document.getElementById('instagramImage').addEventListener('click', function() {
+            dataLayer.push({
                 'event': 'share',
-                'platform': 'Instagram'
+                'content': 'Evento en vivo',
+                'action': 'click'
             });
         });
     </script>
