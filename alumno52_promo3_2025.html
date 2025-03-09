@@ -1,182 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P8XZZLV6');</script>
-<!-- End Google Tag Manager -->
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P8XZZLV6');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>
         body {
-            background-color: #111;
-            color: #fff;
+            background-color: #f5f5f5;
+            color: #333;
             font-family: 'Arial', sans-serif;
         }
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            padding: 30px;
-            margin-top: 50px;
-        }
-        h2, h3 {
-            color: #fff;
+
+        .header {
+            background-image: url('https://i.postimg.cc/2y3vMpbd/imagen-de-fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
             text-align: center;
+            padding-top: 200px;
         }
-        hr {
-            border-top: 1px solid #fff;
+
+        .header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
         }
-        .btn-primary {
-            background: #ff6f61;
-            border: none;
-            box-shadow: 0 0 15px #ff6f61;
-            transition: 0.3s;
+
+        .header p {
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
         }
-        .btn-primary:hover {
-            background: #ff8f81;
-            box-shadow: 0 0 20px #ff8f81;
+
+        .section-title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2.5rem;
+            color: #000000;
         }
-        a {
-            color: #ff6f61;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        a:hover {
-            color: #ff8f81;
-        }
-        .form-container {
+
+        .product-gallery {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
         }
-        .form-section {
-            flex: 1;
-            margin: 10px;
+
+        .product-card {
+            width: 30%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            transition: transform 0.3s ease;
         }
-        .form-description {
-            margin-bottom: 15px;
-            color: #fff;
-        }
-        .image-section {
-            flex: 1;
-            margin: 10px;
-        }
-        .image-section img {
+
+        .product-card img {
             width: 100%;
             height: auto;
+            border-bottom: 2px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card h4 {
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            background-color: #ff6f61;
+            padding: 40px;
+            color: white;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-            cursor: pointer;
-            transition: 0.3s;
+            margin-top: 50px;
         }
-        .image-section img:hover {
-            opacity: 0.8;
+
+        .contact-form h3 {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .instagram-section {
+
+        .social-links {
             text-align: center;
             margin-top: 30px;
         }
-        .instagram-section img {
+
+        .social-links img {
             width: 50px;
-            height: 50px;
-            cursor: pointer;
-            transition: 0.3s;
+            margin: 0 10px;
+            transition: opacity 0.3s ease;
         }
-        .instagram-section img:hover {
+
+        .social-links img:hover {
             opacity: 0.8;
         }
-        .video-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .video-container iframe {
-            width: 80%;
-            height: 450px;
-        }
     </style>
-    <title>Tienda Ecommerce Futurista</title>
+    <title>Repostería Gourmet - Pasteles Personalizados</title>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16871995335"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-16871995335');
+      gtag('config', 'AW-AW-16871995335');
     </script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8XZZLV6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="container mt-5">
-        <h2>TRANSFORMANDO TU NEGOCIO CON HUGO LÓPEZ😊</h2>
-        <div class="form-container">
-            <div class="form-section">
-                <div class="form-description">
-                    <p>Primer encuentro presencial organizado para toda la comunidad con el objetivo de potenciar los resultados de sus negocios y reflejar que todos podemos lograr cualquier cosa que queramos en esta vida💪.</p>
-                </div>
-                <form id="contactForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Teléfono</label>
-                        <input type="tel" class="form-control" id="phone" required>
-                    </div>
-                    <button type="submit" id="enviarBtn" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
-            <div class="image-section">
-                <a href="https://www.joinnus.com/events/seminarios-conferencias/lima-transformando-tu-negocio-con-hugo-lopez-63856" target="_blank">
-                    <img src="https://s3-us-west-2.amazonaws.com/joinnus.com/user/3990907/act66b161b790dd1.jpg" alt="Imagen de Evento">
-                </a>
-            </div>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8XZZLV6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Bienvenidos a The Queen Bee Pastelería</h1>
+        <p>Pastelería creativa y artesanal</p>
+    </div>
+
+    <!-- Galería de Productos -->
+    <div class="section-title">
+        <h2>Nuestros Pasteles</h2>
+    </div>
+    <div class="product-gallery">
+        <div class="product-card">
+            <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
+            <h4>Pastel de Pre-Novias</h4>
         </div>
-        <div class="instagram-section">
-            <h3>¡Conoce mucho más del evento en este video!😃</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/7jHfHS8VWF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p>Compra tus entradas en Joinnus aquí</p>
-            <a href="https://www.joinnus.com/events/seminarios-conferencias/lima-transformando-tu-negocio-con-hugo-lopez-63856" target="_blank" id="instagramLink">
-                <img src="https://cdn.joinnus.com/blog/wp-content/uploads/2018/12/19185753/joinnus-logo.jpg" alt="Instagram Logo">
-            </a>
+        <div class="product-card">
+            <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
+            <h4>Pastel de Cumpleaños</h4>
+        </div>
+        <div class="product-card">
+            <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
+            <h4>Pastel Temático en Tendencia</h4>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFNf5P289jCW9+5sX2pGAflq1cZZHd0GrgkB1VYFhsjraQdmVg85O4W8p" crossorigin="anonymous"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Aquí puedes agregar código para enviar los datos a un servidor si es necesario
-            window.location.href = 'https://pruebacursosegundo.vercel.app/graciasalumno10promo2.html';
-        });
 
-        document.getElementById('enviarBtn').addEventListener('click', function() {
-            document.getElementById('contactForm').submit();
-            dataLayer.push({
-                'event': 'customButtonClick',
-                'buttonId': 'enviarBtn',
-                'buttonText': 'Enviar'
-            });
-        });
+    <!-- Redes Sociales -->
+    <div class="social-links">
+        <h3>Síguenos en nuestras redes sociales</h3>
+        <a href="https://www.instagram.com/thequeenbee.pe/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/thequeenbee.pe" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@thequeenbee.pe" target="_blank"><img src="https://i.postimg.cc/SNr46mMv/tiktokpng2.png" alt="TikTok"></a>
+        <a href="https://www.youtube.com/@thequeenbeepasteleria" target="_blank"><img src="https://i.postimg.cc/6qSYx22Q/youtube-png.png" alt="Youtube"></a>
+    </div>
 
-        document.getElementById('instagramLink').addEventListener('click', function() {
-            dataLayer.push({
-                'event': 'share',
-                'platform': 'Instagram'
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
