@@ -162,32 +162,94 @@
     }
 </style>
 
+<style>
+    .product-card {
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .whatsapp-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.6);
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp-button img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .whatsapp-button:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .product-card h4 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: #333;
+    }
+</style>
+
 <div class="product-gallery">
     <div class="product-card">
         <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
         <h4>Pastel de Pre-Novias</h4>
-        <a href="https://wa.me/c/51941453659" onclick="solicitarPedido('Pastel de Pre-Novias')">Solicita tu pedido aquí</a>
+        <button class="whatsapp-button" onclick="solicitarPedido('Pastel de Pre-Novias')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </button>
     </div>
+
     <div class="product-card">
         <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
         <h4>Pastel de Cumpleaños</h4>
-        <a href="https://wa.me/c/51941453659" onclick="solicitarPedido('Pastel de Cumpleaños')">Solicita tu pedido aquí</a>
+        <button class="whatsapp-button" onclick="solicitarPedido('Pastel de Cumpleaños')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </button>
     </div>
+
     <div class="product-card">
         <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
         <h4>Pastel Temático en Tendencia</h4>
-        <a href="https://wa.me/c/51941453659" onclick="solicitarPedido('Pastel Temático en Tendencia')">Solicita tu pedido aquí</a>
+        <button class="whatsapp-button" onclick="solicitarPedido('Pastel Temático en Tendencia')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </button>
     </div>
 </div>
 
 <script>
-    function solicitarPedido(pastelNombre) {
+    function solicitarPedido(nombrePastel) {
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
-            'event': 'solicitudPedido',
-            'pastel': pastelNombre
+            'event': 'solicitar_pedido',
+            'Pastel': nombrePastel
         });
-        alert('Has solicitado: ' + pastelNombre);
+
+        // Redirige a WhatsApp
+        window.location.href = "https://wa.me/c/51941453659";
     }
 </script>
 
