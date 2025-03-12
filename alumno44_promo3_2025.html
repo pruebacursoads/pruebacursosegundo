@@ -140,21 +140,43 @@
     <div class="section-title">
         <h2>Nuestros Pasteles</h2>
     </div>
-    <div class="product-gallery">
+    <style>
+    .product-card {
+        position: relative;
+        text-align: center;
+    }
+    .product-card button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .product-card button:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+</style>
+
+<div class="product-gallery">
     <div class="product-card">
         <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
         <h4>Pastel de Pre-Novias</h4>
-        <button class="btn btn-primary" onclick="solicitarPedido('Pastel de Pre-Novias')">Solicita tu pedido aquí</button>
+        <button onclick="solicitarPedido('Pastel de Pre-Novias')">Solicita tu pedido aquí</button>
     </div>
     <div class="product-card">
         <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
         <h4>Pastel de Cumpleaños</h4>
-        <button class="btn btn-primary" onclick="solicitarPedido('Pastel de Cumpleaños')">Solicita tu pedido aquí</button>
+        <button onclick="solicitarPedido('Pastel de Cumpleaños')">Solicita tu pedido aquí</button>
     </div>
     <div class="product-card">
         <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
         <h4>Pastel Temático en Tendencia</h4>
-        <button class="btn btn-primary" onclick="solicitarPedido('Pastel Temático en Tendencia')">Solicita tu pedido aquí</button>
+        <button onclick="solicitarPedido('Pastel Temático en Tendencia')">Solicita tu pedido aquí</button>
     </div>
 </div>
 
