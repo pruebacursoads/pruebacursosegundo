@@ -141,19 +141,33 @@
         <h2>Nuestros Pasteles</h2>
     </div>
     <div class="product-gallery">
-        <div class="product-card">
-            <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
-            <h4>Pastel de Pre-Novias</h4>
-        </div>
-        <div class="product-card">
-            <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
-            <h4>Pastel de Cumpleaños</h4>
-        </div>
-        <div class="product-card">
-            <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
-            <h4>Pastel Temático en Tendencia</h4>
-        </div>
-    </div
+    <div class="product-card">
+        <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
+        <h4>Pastel de Pre-Novias</h4>
+        <button class="btn btn-primary" onclick="solicitarPedido('Pastel de Pre-Novias')">Solicita tu pedido aquí</button>
+    </div>
+    <div class="product-card">
+        <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
+        <h4>Pastel de Cumpleaños</h4>
+        <button class="btn btn-primary" onclick="solicitarPedido('Pastel de Cumpleaños')">Solicita tu pedido aquí</button>
+    </div>
+    <div class="product-card">
+        <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
+        <h4>Pastel Temático en Tendencia</h4>
+        <button class="btn btn-primary" onclick="solicitarPedido('Pastel Temático en Tendencia')">Solicita tu pedido aquí</button>
+    </div>
+</div>
+
+<script>
+    function solicitarPedido(pastelNombre) {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'solicitudPedido',
+            'pastel': pastelNombre
+        });
+        alert('Has solicitado: ' + pastelNombre);
+    }
+</script>
 
         <!-- Banner de Imagen -->
 <div style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 20px;">
