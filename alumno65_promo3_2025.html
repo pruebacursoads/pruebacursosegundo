@@ -168,6 +168,7 @@
         text-align: center;
         border-radius: 10px;
         overflow: hidden;
+        padding-bottom: 50px;
     }
 
     .product-card img {
@@ -181,35 +182,35 @@
         transform: scale(1.05);
     }
 
-    .whatsapp-button {
+    .whatsapp-container {
         position: absolute;
-        top: 50%;
+        bottom: 15px;
         left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(255, 255, 255, 0.6);
-        border: none;
-        padding: 15px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background 0.3s ease, transform 0.2s ease;
+        transform: translateX(-50%);
         display: flex;
         align-items: center;
-        justify-content: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 8px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .whatsapp-button img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .whatsapp-button:hover {
+    .whatsapp-container:hover {
         background: rgba(255, 255, 255, 1);
-        transform: translate(-50%, -50%) scale(1.1);
+        transform: translateX(-50%) scale(1.05);
     }
 
-    .product-card h4 {
-        margin-top: 10px;
-        font-size: 1.2rem;
+    .whatsapp-container img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .whatsapp-text {
+        font-size: 1rem;
+        font-weight: bold;
         color: #333;
     }
 </style>
@@ -218,25 +219,28 @@
     <div class="product-card">
         <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
         <h4>Pastel de Pre-Novias</h4>
-        <button class="whatsapp-button" onclick="solicitarPedido('Pastel de Pre-Novias')">
+        <div class="whatsapp-container" onclick="solicitarPedido('Pastel de Pre-Novias')">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </button>
+            <span class="whatsapp-text">Solicita tu pedido</span>
+        </div>
     </div>
 
     <div class="product-card">
         <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
         <h4>Pastel de Cumpleaños</h4>
-        <button class="whatsapp-button" onclick="solicitarPedido('Pastel de Cumpleaños')">
+        <div class="whatsapp-container" onclick="solicitarPedido('Pastel de Cumpleaños')">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </button>
+            <span class="whatsapp-text">Solicita tu pedido</span>
+        </div>
     </div>
 
     <div class="product-card">
         <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
         <h4>Pastel Temático en Tendencia</h4>
-        <button class="whatsapp-button" onclick="solicitarPedido('Pastel Temático en Tendencia')">
+        <div class="whatsapp-container" onclick="solicitarPedido('Pastel Temático en Tendencia')">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </button>
+            <span class="whatsapp-text">Solicita tu pedido</span>
+        </div>
     </div>
 </div>
 
