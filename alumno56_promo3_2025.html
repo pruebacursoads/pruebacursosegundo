@@ -130,7 +130,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header Section -->
+     <!-- Header Section -->
     <div class="header">
         <h1>Bienvenidos a The Queen Bee Pastelería</h1>
         <p>Pastelería creativa y artesanal</p>
@@ -140,21 +140,152 @@
     <div class="section-title">
         <h2>Nuestros Pasteles</h2>
     </div>
-    <div class="product-gallery">
-        <div class="product-card">
-            <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
-            <h4>Pastel de Pre-Novias</h4>
-        </div>
-        <div class="product-card">
-            <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
-            <h4>Pastel de Cumpleaños</h4>
-        </div>
-        <div class="product-card">
-            <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
-            <h4>Pastel Temático en Tendencia</h4>
+    <style>
+    .product-card {
+        position: relative;
+        text-align: center;
+    }
+    .product-card button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .product-card button:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+</style>
+
+<style>
+    .product-card {
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+        padding-bottom: 50px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .whatsapp-container {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 8px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .whatsapp-container:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    .whatsapp-container img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .whatsapp-text {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+
+<div class="product-gallery">
+    <div class="product-card">
+        <img src="https://i.postimg.cc/rmBr8Vpj/nuestro-matrimonio.png">
+        <h4>Pastel de Pre-Novias</h4>
+        <div class="whatsapp-container" onclick="solicitarPedido('Pastel de Pre-Novias')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            <span class="whatsapp-text">Solicita tu pedido</span>
         </div>
     </div>
 
+    <div class="product-card">
+        <img src="https://i.postimg.cc/qRPRpg17/thequeenbee-cumple.png" alt="Pastel 2">
+        <h4>Pastel de Cumpleaños</h4>
+        <div class="whatsapp-container" onclick="solicitarPedido('Pastel de Cumpleaños')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            <span class="whatsapp-text">Solicita tu pedido</span>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://i.postimg.cc/85y5syc5/vanguardismo-fotopastel.png" alt="Pastel 3">
+        <h4>Pastel Temático en Tendencia</h4>
+        <div class="whatsapp-container" onclick="solicitarPedido('Pastel Temático en Tendencia')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            <span class="whatsapp-text">Solicita tu pedido</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    function solicitarPedido(nombrePastel) {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'solicitar_pedido',
+            'Pastel': nombrePastel
+        });
+
+        // Redirige a WhatsApp
+        window.location.href = "https://wa.me/c/51941453659";
+    }
+</script>
+
+        <!-- Banner de Imagen -->
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 20px;">
+    <a href="https://linktr.ee/thequeenbeepasteleria">
+        <img src="https://i.postimg.cc/SRg14cjQ/Whats-App-Image-2025-03-08-at-8-40-54-PM.jpg" 
+             alt="Sabores de pasteles y rellenos" 
+             style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+    </a>
+</div>
+
+    <!-- Formulario de Contacto -->
+    <div class="contact-form">
+        <h3>Inscríbete a nuestro cursos aquí</h3>
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <button type="submit" class="btn btn-light w-100">Enviar Pedido</button>
+        </form>
+    </div>
+    
     <!-- Redes Sociales -->
     <div class="social-links">
         <h3>Síguenos en nuestras redes sociales</h3>
